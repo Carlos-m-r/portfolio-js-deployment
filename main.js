@@ -69,9 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function loadContent(number) {  
     const container = document.getElementById("mainContent");
 
-    // Limpiar contenido anterior
-   // container.innerHTML = '';
-
+    // Limpiar contenido anterior si deseas
+    // container.innerHTML = '';
 
     // Cargar HTML
     fetch(`pages/0${number}_reto/index.html`)
@@ -84,14 +83,17 @@ function loadContent(number) {
         .then(html => {
             container.innerHTML = html;
 
+            // Mover el foco a la sección
+            container.scrollIntoView({ behavior: 'smooth' });
+
             // Cargar JS dinámicamente
             const script = document.createElement("script");
-           
             script.src = `pages/0${number}_reto/main.js`;
             script.type = "text/javascript";
             document.body.append(script);
         })
         .catch(error => {
             container.innerHTML = `<p>Error: ${error.message}</p>`;
+            container.scrollIntoView({ behavior: 'smooth' }); // También en caso de error
         });
 }
