@@ -1,0 +1,39 @@
+<html>
+<head>
+    <script src="block5.js" defer></script>
+</head>
+<body>
+<h1>Bloque 5</h1>
+<section class="gallery">
+<div class="card">
+  <h2>1. Mostrar/ocultar pass</h2>
+  <label for="labelPass">Contraseña: </label>
+  <input type="password" id="inputPass"></input>
+  <button type="button" onclick="showPass()">Mostrar/ocultar</button>
+</div>
+
+
+<div class="card">
+  <h2>2. Registro en tiempo real</h2>
+  <label for="labelInput">Escriba: </label>
+  <input type="text" id="inputText">
+  <label for="outputText">Texto de salida: </label>
+  <input type="text" id="outputText" disabled></input>
+</div>
+
+
+<div class="card">
+  <h2>3. Reloj</h2>
+  <label id="labelClock">Fecha actual:</label>
+  <p id="clock"></p>
+</div>
+
+<div class="card">
+  <h2>3. Click Counter</h2>
+  <button type="button" onclick="addClick()">Sumar click</button>
+  <p>Total clicks: <span id="totalClicks">0</span></p>
+  <img class="clicker" src="assets/img/bucket.png" width="35" height="35">
+</div>
+</section>
+</body>
+</html>
